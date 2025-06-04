@@ -1,37 +1,38 @@
 <script lang="ts" setup>
-const DATA_FLAT = [
-  12, 19, 11, 2, 10, -2, 5, 13, 0, 5, 1, 1, 17, 12, 1.5, 17, 0, 10, 15, -2, 5,
-  2, 3, 6, 3, -1, 12, 11, 9, 22, 4, 0, 7, 3, 8, 21, 17, 12, 5, 8,
-];
-const rows = ref();
-function getRepeatFrequency(data: number[]) {
-  const copy = [...data];
-  copy.sort((a, b) => a - b);
-
-  console.log(copy);
-  const repeats: Record<number, number> = {};
-
-  for (const item of copy) {
-    if (repeats[item]) {
-      repeats[item]++;
-    } else {
-      repeats[item] = 1;
-    }
+const userData = ref<number[]>([]);
+const currentNumber = ref<number | null>(null);
+function addNumber() {
+  if (!currentNumber.value) {
+    alert("Please enter a number");
+    return;
   }
-  const res = Object.entries(repeats).map(([key, value]) => ({
-    value: Number(key),
-    count: value,
-  }));
-  rows.value = res;
-  return res;
+  userData.value.push(Number(currentNumber.value));
+  currentNumber.value = null;
 }
+
+function calculate() {}
 </script>
 
 <template>
   <div class="app-container">
     <header class="header-container">MathApp</header>
+
+    <div>
+      <h2>Enter your number</h2>
+      <p>Your elems list: {{ userData }}</p>
+      <div>
+        <InputText
+          placeholder="Add your number to list"
+          type="number"
+          v-model="currentNumber"
+        />
+        <Button label="ADD" @click="addNumber" />
+        <Button label="Calculate" @click="calculate" />
+      </div>
+    </div>
+
     <main class="main-container">
-      <Statistics></Statistics>
+      <Statistics :data="userData"></Statistics>
 
       <!-- <div>
         <article v-if="false">
