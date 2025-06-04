@@ -1,81 +1,102 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed } from "vue";
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 import Chart from "primevue/chart";
 
+interface StatObj {
+  value: number;
+  frequency?: number;
+  relFreq?: number;
+  cumFreq?: number;
+  cumRelFreq?: number;
+}
+
 const props = withDefaults(defineProps<{ data?: number[] }>(), {
-  data: () => [
-    12, 19, 11, 2, 10, -2, 5, 13, 0, 5, 1, 1, 17, 12, 1.5,
-    // 17, 0, 10, 15, -2, 5,
-    // 2, 3, 6, 3, -1, 12, 11, 9, 22, 4, 0, 7, 3, 8, 21, 17, 12, 5, 8,
-  ],
+  data: () => [] as number[],
 });
-const data = computed(() => props.data);
 
 const math = useMath();
-const absFreq = ref(math.getAbsoluteFreq(data.value));
-const relFreq = ref(math.getRelativeFreq(data.value));
-const cumFreq = ref(math.getCumulativeFreq(data.value));
-const cumRelFreq = ref(math.getCumulativeRelFreq(data.value));
 
-const polygonData = ref(math.getPolygonData(data.value));
-const relativePolygonData = ref(math.getRelativePolygonData(data.value));
-const ecdfChart = ref({
-  labels: math.getECDF(data.value).map((p) => p.x.toString()),
+// Усі розрахунки покладені в computed, тому при зміні props.data
+// все автоматично перераховується.
+
+const absFreq = computed<StatObj[]>(() => {
+  return math.getAbsoluteFreq(props.data!);
+});
+
+const relFreq = computed<StatObj[]>(() => {
+  // повертає масив об'єктів { value, relFreq }
+  return math.getRelativeFreq(props.data!);
+});
+
+const cumFreq = computed<StatObj[]>(() => {
+  return math.getCumulativeFreq(props.data!);
+});
+
+const cumRelFreq = computed<StatObj[]>(() => {
+  return math.getCumulativeRelFreq(props.data!);
+});
+
+// Дані для полігону (частоти)
+const polygonData = computed(() => {
+  return math.getPolygonData(props.data!);
+});
+
+// Дані для полігону (відносні частоти)
+const relativePolygonData = computed(() => {
+  return math.getRelativePolygonData(props.data!);
+});
+
+// Дані для ECDF
+const ecdfPoints = computed(() => math.getECDF(props.data!));
+const ecdfChart = computed(() => ({
+  labels: ecdfPoints.value.map((p) => p.x.toString()),
   datasets: [
     {
       label: "ECDF",
-      data: math.getECDF(data.value).map((p) => p.y),
+      data: ecdfPoints.value.map((p) => p.y),
       stepped: true,
     },
   ],
-});
-const histData = ref(math.getHistogramData(data.value));
+}));
 
-const mean = math.getMean(data.value);
-const median = math.getMedian(data.value);
-const mode = math.getMode(data.value);
-const variance = math.getVariance(data.value);
-const stdDev = math.getStdDev(data.value);
+// Дані для гістограми
+const histData = computed(() => math.getHistogramData(props.data!));
+
+// Числові характеристики
+const mean = computed(() => math.getMean(props.data!));
+const median = computed(() => math.getMedian(props.data!));
+const mode = computed(() => math.getMode(props.data!));
+const variance = computed(() => math.getVariance(props.data!));
+const stdDev = computed(() => math.getStdDev(props.data!));
 </script>
 <template>
-  <div>
+  <div v-if="data.length > 0">
     <h2>Статистичні розподіли</h2>
 
     <div class="flex-group">
-      <DataTable :value="absFreq" style="border-right: 1px solid black">
+      <DataTable :value="absFreq" style="border-right: 1px solid #ccc">
         <Column field="value" header="Значення" />
         <Column field="frequency" header="Абс. частота" />
       </DataTable>
 
-      <DataTable
-        :value="relFreq"
-        class="mt-4"
-        style="border-right: 1px solid black"
-      >
+      <DataTable :value="relFreq" style="border-right: 1px solid #ccc">
         <Column field="value" header="Значення" />
         <Column field="relFreq" header="Відн. частота" />
       </DataTable>
 
-      <DataTable
-        :value="cumFreq"
-        class="mt-4"
-        style="border-right: 1px solid black"
-      >
+      <DataTable :value="cumFreq" style="border-right: 1px solid #ccc">
         <Column field="value" header="Значення" />
         <Column field="cumFreq" header="Накоп. частота" />
       </DataTable>
 
-      <DataTable
-        :value="cumRelFreq"
-        class="mt-4"
-        style="border-right: 1px solid black"
-      >
+      <DataTable :value="cumRelFreq">
         <Column field="value" header="Значення" />
         <Column field="cumRelFreq" header="Накоп. відн. частота" />
       </DataTable>
     </div>
+
     <h2 class="mt-6">Графіки</h2>
     <div class="charts">
       <Chart type="line" :data="polygonData" class="my-4" />
@@ -88,6 +109,7 @@ const stdDev = math.getStdDev(data.value);
       />
       <Chart type="bar" :data="histData" class="my-4" />
     </div>
+
     <h2 class="mt-6">Числові характеристики</h2>
     <ul>
       <li>Мода: {{ mode.join(", ") }}</li>
@@ -97,12 +119,20 @@ const stdDev = math.getStdDev(data.value);
       <li>Сер.квадр. відхилення: {{ stdDev.toFixed(3) }}</li>
     </ul>
   </div>
+
+  <div v-else>
+    <p>
+      Введіть хоча б одне число та натисніть «Calculate», щоб побачити
+      результати.
+    </p>
+  </div>
 </template>
 
 <style scoped>
 .flex-group {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .charts {
