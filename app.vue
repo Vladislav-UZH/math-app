@@ -1,14 +1,8 @@
 <script lang="ts" setup>
 import { ref } from "vue";
-import Statistics from "~/components/Statistics.vue"; // ваше розташування компонента
 
-// Масив, куди будемо додавати числа з інпута:
 const userData = ref<number[]>([]);
-// Поточне введіене користувачем число:
 const currentNumber = ref<number | null>(null);
-
-// Масив, який передамо до <Statistics>
-// (нащадок userData, але із затримкою — лише після натискання Calculate)
 const statsData = ref<number[]>([]);
 
 function addNumber() {
@@ -21,9 +15,28 @@ function addNumber() {
 }
 
 function calculate() {
-  // Копіюємо всі числа із userData у statsData,
-  // щоб <Statistics> почав перерахунок саме зараз.
   statsData.value = [...userData.value];
+}
+
+function onFileChange(event: Event) {
+  const input = event.target as HTMLInputElement;
+  if (!input.files || input.files.length === 0) {
+    return;
+  }
+  const file = input.files[0];
+  const reader = new FileReader();
+  reader.onload = () => {
+    const text = reader.result as string;
+    const tokens = text.split(/[\s,]+/);
+    tokens.forEach((token) => {
+      const num = parseFloat(token);
+      if (!isNaN(num)) {
+        userData.value.push(num);
+      }
+    });
+    input.value = "";
+  };
+  reader.readAsText(file);
 }
 </script>
 
@@ -43,12 +56,19 @@ function calculate() {
         <Button label="ADD" @click="addNumber" />
         <Button label="Calculate" @click="calculate" />
       </div>
+
+      <div class="file-upload">
+        <label for="fileInput">Load from .txt:</label>
+        <input
+          id="fileInput"
+          type="file"
+          accept=".txt"
+          @change="onFileChange"
+        />
+      </div>
     </section>
 
     <main class="main-container">
-      <!-- <Statistics> відображає лише ті дані, 
-           що лежать в statsData. Спочатку statsData = [], 
-           тому жодного виклику обчислень не буде. -->
       <Statistics :data="statsData" />
     </main>
   </div>
@@ -76,6 +96,14 @@ function calculate() {
   display: flex;
   gap: 8px;
   align-items: center;
+  margin-bottom: 12px;
+}
+
+.file-upload {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .main-container {

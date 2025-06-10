@@ -18,9 +18,6 @@ const props = withDefaults(defineProps<{ data?: number[] }>(), {
 
 const math = useMath();
 
-// Усі розрахунки покладені в computed, тому при зміні props.data
-// все автоматично перераховується.
-
 const absFreq = computed<StatObj[]>(() => {
   return math.getAbsoluteFreq(props.data!);
 });
@@ -95,29 +92,34 @@ const stdDev = computed(() => math.getStdDev(props.data!));
         <Column field="value" header="Значення" />
         <Column field="cumRelFreq" header="Накоп. відн. частота" />
       </DataTable>
+      <div>
+        <h2 class="mt-6">Числові характеристики</h2>
+        <ul>
+          <li>Мода: {{ mode.join(", ") }}</li>
+          <li>Медіана: {{ median }}</li>
+          <li>Середнє: {{ mean.toFixed(3) }}</li>
+          <li>Дисперсія: {{ variance.toFixed(3) }}</li>
+          <li>Сер.квадр. відхилення: {{ stdDev.toFixed(3) }}</li>
+        </ul>
+      </div>
     </div>
 
     <h2 class="mt-6">Графіки</h2>
     <div class="charts">
+      <p>Полігон Абсолютних Частот</p>
       <Chart type="line" :data="polygonData" class="my-4" />
+      <p>Полігон Відносних Частот</p>
       <Chart type="line" :data="relativePolygonData" class="my-4" />
+      <p>Емпірична Функція Розподілу (ECDF)</p>
       <Chart
         type="line"
         :data="ecdfChart"
         class="my-4"
         :options="{ stepped: true }"
       />
+      <p>Гістограма Інтервального Розподілу</p>
       <Chart type="bar" :data="histData" class="my-4" />
     </div>
-
-    <h2 class="mt-6">Числові характеристики</h2>
-    <ul>
-      <li>Мода: {{ mode.join(", ") }}</li>
-      <li>Медіана: {{ median }}</li>
-      <li>Середнє: {{ mean.toFixed(3) }}</li>
-      <li>Дисперсія: {{ variance.toFixed(3) }}</li>
-      <li>Сер.квадр. відхилення: {{ stdDev.toFixed(3) }}</li>
-    </ul>
   </div>
 
   <div v-else>

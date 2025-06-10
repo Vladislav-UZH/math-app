@@ -91,6 +91,8 @@ export default function () {
     }
     return bins;
   };
+  // Коригувати кількісит інтепвалів
+  //Формула Стёрджеса: k = 1 + 3.322 * log10(n)
 
   const getHistogramData = (data: number[]) => {
     const bins = getSturgesBins(data);
