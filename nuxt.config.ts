@@ -7,7 +7,11 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@vite-pwa/nuxt",
+    "@pinia/nuxt",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/tailwindcss",
   ],
+  css: ["~/assets/css/main.css"],
   primevue: {
     options: {
       // ripple: true,

@@ -12,7 +12,13 @@ type HydrationStrategies = {
 }
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
-      'Statistics': typeof import("../components/Statistics.vue")['default']
+      'DataInput': typeof import("../components/DataInput.vue")['default']
+    'EmpiricalCDF': typeof import("../components/EmpiricalCDF.vue")['default']
+    'FreqPolygons': typeof import("../components/FreqPolygons.vue")['default']
+    'IntervalHistogram': typeof import("../components/IntervalHistogram.vue")['default']
+    'NumStats': typeof import("../components/NumStats.vue")['default']
+    'Statistics': typeof import("../components/Statistics.vue")['default']
+    'StatsTables': typeof import("../components/StatsTables.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -155,7 +161,7 @@ interface _GlobalComponents {
     'PwaFaviconImage': typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaFaviconImage.vue")['default']
     'PwaMaskableImage': typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaMaskableImage.vue")['default']
     'PwaTransparentImage': typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaTransparentImage.vue")['default']
-    'NuxtPage': typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']
+    'NuxtPage': typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']
     'NoScript': typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']
     'Link': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']
     'Base': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']
@@ -167,7 +173,13 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyStatistics': LazyComponent<typeof import("../components/Statistics.vue")['default']>
+      'LazyDataInput': LazyComponent<typeof import("../components/DataInput.vue")['default']>
+    'LazyEmpiricalCDF': LazyComponent<typeof import("../components/EmpiricalCDF.vue")['default']>
+    'LazyFreqPolygons': LazyComponent<typeof import("../components/FreqPolygons.vue")['default']>
+    'LazyIntervalHistogram': LazyComponent<typeof import("../components/IntervalHistogram.vue")['default']>
+    'LazyNumStats': LazyComponent<typeof import("../components/NumStats.vue")['default']>
+    'LazyStatistics': LazyComponent<typeof import("../components/Statistics.vue")['default']>
+    'LazyStatsTables': LazyComponent<typeof import("../components/StatsTables.vue")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -310,7 +322,7 @@ interface _GlobalComponents {
     'LazyPwaFaviconImage': LazyComponent<typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaFaviconImage.vue")['default']>
     'LazyPwaMaskableImage': LazyComponent<typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaMaskableImage.vue")['default']>
     'LazyPwaTransparentImage': LazyComponent<typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaTransparentImage.vue")['default']>
-    'LazyNuxtPage': LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']>
+    'LazyNuxtPage': LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']>
     'LazyNoScript': LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
     'LazyLink': LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']>
     'LazyBase': LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']>
@@ -328,7 +340,13 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const DataInput: typeof import("../components/DataInput.vue")['default']
+export const EmpiricalCDF: typeof import("../components/EmpiricalCDF.vue")['default']
+export const FreqPolygons: typeof import("../components/FreqPolygons.vue")['default']
+export const IntervalHistogram: typeof import("../components/IntervalHistogram.vue")['default']
+export const NumStats: typeof import("../components/NumStats.vue")['default']
 export const Statistics: typeof import("../components/Statistics.vue")['default']
+export const StatsTables: typeof import("../components/StatsTables.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -471,7 +489,7 @@ export const PwaAppleSplashScreenImage: typeof import("../node_modules/@vite-pwa
 export const PwaFaviconImage: typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaFaviconImage.vue")['default']
 export const PwaMaskableImage: typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaMaskableImage.vue")['default']
 export const PwaTransparentImage: typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaTransparentImage.vue")['default']
-export const NuxtPage: typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']
+export const NuxtPage: typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']
 export const NoScript: typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']
 export const Link: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']
 export const Base: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']
@@ -483,7 +501,13 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+export const LazyDataInput: LazyComponent<typeof import("../components/DataInput.vue")['default']>
+export const LazyEmpiricalCDF: LazyComponent<typeof import("../components/EmpiricalCDF.vue")['default']>
+export const LazyFreqPolygons: LazyComponent<typeof import("../components/FreqPolygons.vue")['default']>
+export const LazyIntervalHistogram: LazyComponent<typeof import("../components/IntervalHistogram.vue")['default']>
+export const LazyNumStats: LazyComponent<typeof import("../components/NumStats.vue")['default']>
 export const LazyStatistics: LazyComponent<typeof import("../components/Statistics.vue")['default']>
+export const LazyStatsTables: LazyComponent<typeof import("../components/StatsTables.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -626,7 +650,7 @@ export const LazyPwaAppleSplashScreenImage: LazyComponent<typeof import("../node
 export const LazyPwaFaviconImage: LazyComponent<typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaFaviconImage.vue")['default']>
 export const LazyPwaMaskableImage: LazyComponent<typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaMaskableImage.vue")['default']>
 export const LazyPwaTransparentImage: LazyComponent<typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/PwaTransparentImage.vue")['default']>
-export const LazyNuxtPage: LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']>
+export const LazyNuxtPage: LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']>
 export const LazyNoScript: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
 export const LazyLink: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']>
 export const LazyBase: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']>

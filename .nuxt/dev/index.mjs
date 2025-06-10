@@ -1,141 +1,141 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, getQuery as getQuery$1, readBody, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getResponseStatusText } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { escapeHtml } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@vue/shared/dist/shared.cjs.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/vue/server-renderer/index.mjs';
-import destr, { destr as destr$1 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/destr/dist/index.mjs';
-import { createHooks } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///home/vlad/UZNHU/math/math-app/node_modules/unstorage/drivers/fs.mjs';
-import { digest, hash as hash$1 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/ohash/dist/index.mjs';
-import { klona } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/defu/dist/defu.mjs';
-import { snakeCase } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/scule/dist/index.mjs';
-import { getContext } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/unctx/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, getQuery as getQuery$1, readBody, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getResponseStatusText } from 'file://D:/GitHub/math-app/node_modules/h3/dist/index.mjs';
+import { escapeHtml } from 'file://D:/GitHub/math-app/node_modules/@vue/shared/dist/shared.cjs.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://D:/GitHub/math-app/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file://D:/GitHub/math-app/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file://D:/GitHub/math-app/node_modules/vue/server-renderer/index.mjs';
+import { klona } from 'file://D:/GitHub/math-app/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file://D:/GitHub/math-app/node_modules/defu/dist/defu.mjs';
+import destr, { destr as destr$1 } from 'file://D:/GitHub/math-app/node_modules/destr/dist/index.mjs';
+import { snakeCase } from 'file://D:/GitHub/math-app/node_modules/scule/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://D:/GitHub/math-app/node_modules/unhead/dist/server.mjs';
+import { stringify, uneval } from 'file://D:/GitHub/math-app/node_modules/devalue/index.js';
+import { isVNode, toValue, isRef } from 'file://D:/GitHub/math-app/node_modules/vue/index.mjs';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://D:/GitHub/math-app/node_modules/unhead/dist/plugins.mjs';
+import { createHooks } from 'file://D:/GitHub/math-app/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file://D:/GitHub/math-app/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://D:/GitHub/math-app/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://D:/GitHub/math-app/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://D:/GitHub/math-app/node_modules/unstorage/drivers/fs.mjs';
+import { digest, hash as hash$1 } from 'file://D:/GitHub/math-app/node_modules/ohash/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file://D:/GitHub/math-app/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/youch-core/build/index.js';
-import { Youch } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1 } from 'file://D:/GitHub/math-app/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file://D:/GitHub/math-app/node_modules/youch-core/build/index.js';
+import { Youch } from 'file://D:/GitHub/math-app/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file://D:/GitHub/math-app/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { stringify, uneval } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/devalue/index.js';
-import { captureRawStackTrace, parseRawStackTrace } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/errx/dist/index.js';
-import { isVNode, toValue, isRef } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/vue/index.mjs';
-import BaseStyle from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primevue/core/base/style/index.mjs';
-import BaseComponentStyle from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primevue/core/basecomponent/style/index.mjs';
-import { style } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/autocomplete/index.mjs';
-import { isNotEmpty, isEmpty } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/utils/object/index.mjs';
-import { style as style$1 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/cascadeselect/index.mjs';
-import { style as style$2 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/checkbox/index.mjs';
-import { style as style$3 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/checkboxgroup/index.mjs';
-import { style as style$4 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/colorpicker/index.mjs';
-import { style as style$5 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/datepicker/index.mjs';
-import { style as style$6 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/floatlabel/index.mjs';
-import { style as style$7 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/iconfield/index.mjs';
-import { style as style$8 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/iftalabel/index.mjs';
-import { style as style$9 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/inputchips/index.mjs';
-import { style as style$a } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/inputgroup/index.mjs';
-import { style as style$b } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/inputnumber/index.mjs';
-import { style as style$c } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/inputotp/index.mjs';
-import { style as style$d } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/inputtext/index.mjs';
-import { style as style$e } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/knob/index.mjs';
-import { style as style$f } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/listbox/index.mjs';
-import { style as style$g } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/multiselect/index.mjs';
-import { style as style$h } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/password/index.mjs';
-import { style as style$i } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/radiobutton/index.mjs';
-import { style as style$j } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/radiobuttongroup/index.mjs';
-import { style as style$k } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/rating/index.mjs';
-import { style as style$l } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/select/index.mjs';
-import { style as style$m } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/selectbutton/index.mjs';
-import { style as style$n } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/slider/index.mjs';
-import { style as style$o } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/textarea/index.mjs';
-import { style as style$p } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/togglebutton/index.mjs';
-import { style as style$q } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/toggleswitch/index.mjs';
-import { style as style$r } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/treeselect/index.mjs';
-import { style as style$s } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/button/index.mjs';
-import { style as style$t } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/buttongroup/index.mjs';
-import { style as style$u } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/speeddial/index.mjs';
-import { style as style$v } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/splitbutton/index.mjs';
-import { style as style$w } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/datatable/index.mjs';
-import { style as style$x } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/dataview/index.mjs';
-import { style as style$y } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/orderlist/index.mjs';
-import { style as style$z } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/organizationchart/index.mjs';
-import { style as style$A } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/paginator/index.mjs';
-import { style as style$B } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/picklist/index.mjs';
-import { style as style$C } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/tree/index.mjs';
-import { style as style$D } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/treetable/index.mjs';
-import { style as style$E } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/timeline/index.mjs';
-import { style as style$F } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/virtualscroller/index.mjs';
-import { style as style$G } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/accordion/index.mjs';
-import { style as style$H } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/card/index.mjs';
-import { style as style$I } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/divider/index.mjs';
-import { style as style$J } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/fieldset/index.mjs';
-import { style as style$K } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/panel/index.mjs';
-import { style as style$L } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/scrollpanel/index.mjs';
-import { style as style$M } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/splitter/index.mjs';
-import { style as style$N } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/stepper/index.mjs';
-import { style as style$O } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/tabview/index.mjs';
-import { style as style$P } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/tabs/index.mjs';
-import { style as style$Q } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/toolbar/index.mjs';
-import { style as style$R } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/confirmdialog/index.mjs';
-import { style as style$S } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/confirmpopup/index.mjs';
-import { style as style$T } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/dialog/index.mjs';
-import { style as style$U } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/drawer/index.mjs';
-import { style as style$V } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/popover/index.mjs';
-import { style as style$W } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/fileupload/index.mjs';
-import { style as style$X } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/breadcrumb/index.mjs';
-import { style as style$Y } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/contextmenu/index.mjs';
-import { style as style$Z } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/dock/index.mjs';
-import { style as style$_ } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/menu/index.mjs';
-import { style as style$$ } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/menubar/index.mjs';
-import { style as style$10 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/megamenu/index.mjs';
-import { style as style$11 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/panelmenu/index.mjs';
-import { style as style$12 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/steps/index.mjs';
-import { style as style$13 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/tabmenu/index.mjs';
-import { style as style$14 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/tieredmenu/index.mjs';
-import { style as style$15 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/message/index.mjs';
-import { style as style$16 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/inlinemessage/index.mjs';
-import { style as style$17 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/toast/index.mjs';
-import { style as style$18 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/carousel/index.mjs';
-import { style as style$19 } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/galleria/index.mjs';
-import { style as style$1a } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/image/index.mjs';
-import { style as style$1b } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/imagecompare/index.mjs';
-import { style as style$1c } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/avatar/index.mjs';
-import { style as style$1d } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/badge/index.mjs';
-import { style as style$1e } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/blockui/index.mjs';
-import { style as style$1f } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/chip/index.mjs';
-import { style as style$1g } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/inplace/index.mjs';
-import { style as style$1h } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/metergroup/index.mjs';
-import { style as style$1i } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/overlaybadge/index.mjs';
-import { style as style$1j } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/scrolltop/index.mjs';
-import { style as style$1k } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/skeleton/index.mjs';
-import { style as style$1l } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/progressbar/index.mjs';
-import { style as style$1m } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/progressspinner/index.mjs';
-import { style as style$1n } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/tag/index.mjs';
-import { style as style$1o } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/terminal/index.mjs';
-import FormStyle from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primevue/forms/form/style/index.mjs';
-import FormFieldStyle from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primevue/forms/formfield/style/index.mjs';
-import { style as style$1p } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/tooltip/index.mjs';
-import { style as style$1q } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styles/ripple/index.mjs';
-import { Theme } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@primeuix/styled/index.mjs';
-import { basename, isAbsolute } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/pathe/dist/index.mjs';
-import { getIcons } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/@iconify/utils/lib/index.mjs';
-import { collections } from 'file:///home/vlad/UZNHU/math/math-app/.nuxt/nuxt-icon-server-bundle.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/unhead/dist/server.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/unhead/dist/plugins.mjs';
-import { walkResolver } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/unhead/dist/utils.mjs';
+import { getContext } from 'file://D:/GitHub/math-app/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://D:/GitHub/math-app/node_modules/errx/dist/index.js';
+import BaseStyle from 'file://D:/GitHub/math-app/node_modules/@primevue/core/base/style/index.mjs';
+import BaseComponentStyle from 'file://D:/GitHub/math-app/node_modules/@primevue/core/basecomponent/style/index.mjs';
+import { style } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/autocomplete/index.mjs';
+import { isNotEmpty, isEmpty } from 'file://D:/GitHub/math-app/node_modules/@primeuix/utils/object/index.mjs';
+import { style as style$1 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/cascadeselect/index.mjs';
+import { style as style$2 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/checkbox/index.mjs';
+import { style as style$3 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/checkboxgroup/index.mjs';
+import { style as style$4 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/colorpicker/index.mjs';
+import { style as style$5 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/datepicker/index.mjs';
+import { style as style$6 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/floatlabel/index.mjs';
+import { style as style$7 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/iconfield/index.mjs';
+import { style as style$8 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/iftalabel/index.mjs';
+import { style as style$9 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/inputchips/index.mjs';
+import { style as style$a } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/inputgroup/index.mjs';
+import { style as style$b } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/inputnumber/index.mjs';
+import { style as style$c } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/inputotp/index.mjs';
+import { style as style$d } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/inputtext/index.mjs';
+import { style as style$e } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/knob/index.mjs';
+import { style as style$f } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/listbox/index.mjs';
+import { style as style$g } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/multiselect/index.mjs';
+import { style as style$h } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/password/index.mjs';
+import { style as style$i } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/radiobutton/index.mjs';
+import { style as style$j } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/radiobuttongroup/index.mjs';
+import { style as style$k } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/rating/index.mjs';
+import { style as style$l } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/select/index.mjs';
+import { style as style$m } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/selectbutton/index.mjs';
+import { style as style$n } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/slider/index.mjs';
+import { style as style$o } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/textarea/index.mjs';
+import { style as style$p } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/togglebutton/index.mjs';
+import { style as style$q } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/toggleswitch/index.mjs';
+import { style as style$r } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/treeselect/index.mjs';
+import { style as style$s } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/button/index.mjs';
+import { style as style$t } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/buttongroup/index.mjs';
+import { style as style$u } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/speeddial/index.mjs';
+import { style as style$v } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/splitbutton/index.mjs';
+import { style as style$w } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/datatable/index.mjs';
+import { style as style$x } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/dataview/index.mjs';
+import { style as style$y } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/orderlist/index.mjs';
+import { style as style$z } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/organizationchart/index.mjs';
+import { style as style$A } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/paginator/index.mjs';
+import { style as style$B } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/picklist/index.mjs';
+import { style as style$C } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/tree/index.mjs';
+import { style as style$D } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/treetable/index.mjs';
+import { style as style$E } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/timeline/index.mjs';
+import { style as style$F } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/virtualscroller/index.mjs';
+import { style as style$G } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/accordion/index.mjs';
+import { style as style$H } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/card/index.mjs';
+import { style as style$I } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/divider/index.mjs';
+import { style as style$J } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/fieldset/index.mjs';
+import { style as style$K } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/panel/index.mjs';
+import { style as style$L } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/scrollpanel/index.mjs';
+import { style as style$M } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/splitter/index.mjs';
+import { style as style$N } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/stepper/index.mjs';
+import { style as style$O } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/tabview/index.mjs';
+import { style as style$P } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/tabs/index.mjs';
+import { style as style$Q } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/toolbar/index.mjs';
+import { style as style$R } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/confirmdialog/index.mjs';
+import { style as style$S } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/confirmpopup/index.mjs';
+import { style as style$T } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/dialog/index.mjs';
+import { style as style$U } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/drawer/index.mjs';
+import { style as style$V } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/popover/index.mjs';
+import { style as style$W } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/fileupload/index.mjs';
+import { style as style$X } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/breadcrumb/index.mjs';
+import { style as style$Y } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/contextmenu/index.mjs';
+import { style as style$Z } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/dock/index.mjs';
+import { style as style$_ } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/menu/index.mjs';
+import { style as style$$ } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/menubar/index.mjs';
+import { style as style$10 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/megamenu/index.mjs';
+import { style as style$11 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/panelmenu/index.mjs';
+import { style as style$12 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/steps/index.mjs';
+import { style as style$13 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/tabmenu/index.mjs';
+import { style as style$14 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/tieredmenu/index.mjs';
+import { style as style$15 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/message/index.mjs';
+import { style as style$16 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/inlinemessage/index.mjs';
+import { style as style$17 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/toast/index.mjs';
+import { style as style$18 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/carousel/index.mjs';
+import { style as style$19 } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/galleria/index.mjs';
+import { style as style$1a } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/image/index.mjs';
+import { style as style$1b } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/imagecompare/index.mjs';
+import { style as style$1c } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/avatar/index.mjs';
+import { style as style$1d } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/badge/index.mjs';
+import { style as style$1e } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/blockui/index.mjs';
+import { style as style$1f } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/chip/index.mjs';
+import { style as style$1g } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/inplace/index.mjs';
+import { style as style$1h } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/metergroup/index.mjs';
+import { style as style$1i } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/overlaybadge/index.mjs';
+import { style as style$1j } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/scrolltop/index.mjs';
+import { style as style$1k } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/skeleton/index.mjs';
+import { style as style$1l } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/progressbar/index.mjs';
+import { style as style$1m } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/progressspinner/index.mjs';
+import { style as style$1n } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/tag/index.mjs';
+import { style as style$1o } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/terminal/index.mjs';
+import FormStyle from 'file://D:/GitHub/math-app/node_modules/@primevue/forms/form/style/index.mjs';
+import FormFieldStyle from 'file://D:/GitHub/math-app/node_modules/@primevue/forms/formfield/style/index.mjs';
+import { style as style$1p } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/tooltip/index.mjs';
+import { style as style$1q } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styles/ripple/index.mjs';
+import { Theme } from 'file://D:/GitHub/math-app/node_modules/@primeuix/styled/index.mjs';
+import { basename, isAbsolute } from 'file://D:/GitHub/math-app/node_modules/pathe/dist/index.mjs';
+import { getIcons } from 'file://D:/GitHub/math-app/node_modules/@iconify/utils/lib/index.mjs';
+import { collections } from 'file://D:/GitHub/math-app/.nuxt/nuxt-icon-server-bundle.mjs';
+import { walkResolver } from 'file://D:/GitHub/math-app/node_modules/unhead/dist/utils.mjs';
 import { fileURLToPath } from 'node:url';
-import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file:///home/vlad/UZNHU/math/math-app/node_modules/ipx/dist/index.mjs';
+import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://D:/GitHub/math-app/node_modules/ipx/dist/index.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"/home/vlad/UZNHU/math/math-app/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"D:/GitHub/math-app/server/assets"}];
 
 const assets = createStorage();
 
@@ -147,11 +147,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/vlad/UZNHU/math/math-app","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/vlad/UZNHU/math/math-app/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/vlad/UZNHU/math/math-app/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/vlad/UZNHU/math/math-app/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/home/vlad/UZNHU/math/math-app/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:/GitHub/math-app","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:/GitHub/math-app/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:/GitHub/math-app/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:/GitHub/math-app/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"D:/GitHub/math-app/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -8081,7 +8081,7 @@ const _inlineRuntimeConfig = {
     "alias": {},
     "fs": {
       "dir": [
-        "/home/vlad/UZNHU/math/math-app/public"
+        "D:/GitHub/math-app/public"
       ]
     },
     "http": {
@@ -8136,11 +8136,6 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
     }
     return void 0;
   }
-});
-
-getContext("nitro-app", {
-  asyncContext: false,
-  AsyncLocalStorage: void 0
 });
 
 const config$1 = useRuntimeConfig();
@@ -8458,13 +8453,13 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _hhMm3LyQutcXDWfHjaBsgj2tBO7oQyXRTE7K0yaAqL8 = (function(nitro) {
+const _IanPmeaNEu6qD0u1eZfkCuGuQbaUiikZNJx75ofx3k = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
-const rootDir = "/home/vlad/UZNHU/math/math-app";
+const rootDir = "D:/GitHub/math-app";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
 
@@ -8483,7 +8478,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _EOrx4Q_xU3hOUOkwzTfhwHiBR2NNhVnJAsk3x19gHGU = (nitroApp) => {
+const _fwyWmEvBw87sz2v58YT0xzAzlSZBte5TrknqanIXkWs = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -11703,7 +11698,7 @@ const themes =
 ].join('');
 
 const defineNitroPlugin = (def) => def;
-const _HmDD1QiMEArJ6MrlSZ2a3niUB_wrotKEMYkzJeUDBQ = defineNitroPlugin(async (nitroApp) => {
+const _LKGobRM_TaQDi_rZr0dJUe2PRcbUBESv_1rOiSgxTk4 = defineNitroPlugin(async (nitroApp) => {
   nitroApp.hooks.hook("render:html", (html) => {
     html.head.unshift(stylesToTop);
     html.head.push(styles$2);
@@ -11712,14 +11707,14 @@ const _HmDD1QiMEArJ6MrlSZ2a3niUB_wrotKEMYkzJeUDBQ = defineNitroPlugin(async (nit
 });
 
 const plugins = [
-  _hhMm3LyQutcXDWfHjaBsgj2tBO7oQyXRTE7K0yaAqL8,
-_EOrx4Q_xU3hOUOkwzTfhwHiBR2NNhVnJAsk3x19gHGU,
-_HmDD1QiMEArJ6MrlSZ2a3niUB_wrotKEMYkzJeUDBQ
+  _IanPmeaNEu6qD0u1eZfkCuGuQbaUiikZNJx75ofx3k,
+_fwyWmEvBw87sz2v58YT0xzAzlSZBte5TrknqanIXkWs,
+_LKGobRM_TaQDi_rZr0dJUe2PRcbUBESv_1rOiSgxTk4
 ];
 
 const warnOnceSet = /* @__PURE__ */ new Set();
 const DEFAULT_ENDPOINT = "https://api.iconify.design";
-const _0nxLwS = defineCachedEventHandler(async (event) => {
+const _8kIBev = defineCachedEventHandler(async (event) => {
   const url = getRequestURL(event);
   if (!url)
     return createError({ status: 400, message: "Invalid icon request" });
@@ -11836,8 +11831,8 @@ function setSSRError(ssrContext, error) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getServerEntry = () => import('file:///home/vlad/UZNHU/math/math-app/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
-const getClientManifest = () => import('file:///home/vlad/UZNHU/math/math-app/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file://D:/GitHub/math-app/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file://D:/GitHub/math-app/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {
@@ -12083,7 +12078,7 @@ async function getIslandContext(event) {
   return ctx;
 }
 
-const _q65ixY = lazyEventHandler(() => {
+const _6LU7xx = lazyEventHandler(() => {
   const opts = useRuntimeConfig().ipx || {};
   const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
   const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
@@ -12101,14 +12096,14 @@ const _q65ixY = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
-const _lazy_SyaI1j = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_SAAvR5 = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_SyaI1j, lazy: true, middleware: false, method: undefined },
-  { route: '/api/_nuxt_icon/:collection', handler: _0nxLwS, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_SAAvR5, lazy: true, middleware: false, method: undefined },
+  { route: '/api/_nuxt_icon/:collection', handler: _8kIBev, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
-  { route: '/_ipx/**', handler: _q65ixY, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_SyaI1j, lazy: true, middleware: false, method: undefined }
+  { route: '/_ipx/**', handler: _6LU7xx, lazy: false, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_SAAvR5, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
